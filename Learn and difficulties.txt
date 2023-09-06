@@ -1,0 +1,24 @@
+found difficult when i wrongly spelled email as emai and run the code first time got the error 
+and resolved it but again when i run the code got the error 
+
+MongoServerError: E11000 duplicate key error collection: inventoryMgmt.users index: emai_1 dup key: { emai: null }
+    at /home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/operations/insert.js:50:33
+    at /home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/cmap/connection_pool.js:331:21
+    at /home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/sdam/server.js:209:17
+    at handleOperationResult (/home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/sdam/server.js:337:20)
+    at Connection.onMessage (/home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/cmap/connection.js:206:9)
+    at MessageStream.<anonymous> (/home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/cmap/connection.js:61:60)
+    at MessageStream.emit (node:events:514:28)
+    at processIncomingData (/home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/cmap/message_stream.js:124:16)
+    at MessageStream._write (/home/khushbu/Documents/HeroVired/Javascript/Node JS/inventoryMgmt/node_modules/mongodb/lib/cmap/message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:399:12) {
+  index: 0,
+  code: 11000,
+  keyPattern: { emai: 1 },
+  keyValue: { emai: null },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+duplicate comments
+
+solution was to clear the index fiel in mongodb document.
+
